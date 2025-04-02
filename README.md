@@ -1,15 +1,14 @@
-# 📝 React-like To-Do List (Vanilla JS)
+# ✅ Simple To-Do List (Vanilla JavaScript)
 
 ## 📌 Overview
-This project is a simple **To-Do List** built using **pure JavaScript** to replicate some core concepts of **React**—like state management, component-based structure, and re-rendering. 🚀  
+This project is a **To-Do List** built using **HTML, CSS, and JavaScript**. It allows users to add and delete tasks dynamically, making task management simple and efficient. 🚀  
 
 ## 🔍 How It Works  
-- **State Management**: The `todos` array stores tasks dynamically.  
-- **Component-like Structure**: The `createTodoComponent()` function generates UI elements similar to React components.  
-- **Manual Re-rendering**: The `render()` function updates the DOM by clearing and re-adding elements when changes occur.  
+- **Add a Task**: Type in a task and click the **"➕ Add ToDo"** button.  
+- **Delete a Task**: Click the **"Delete"** button next to a task to remove it.  
 
 ## 🛠️ Features  
-✔️ Add new tasks dynamically  
-✔️ Remove tasks with a "Delete" button  
-✔️ Mimics React’s state-based updates  
+✔️ Dynamic task addition and removal  
+✔️ Unique ID for each task  
+✔️ Simple and interactive UI  
 
