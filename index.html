@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div id="container">
+        <!-- Input Section -->
+        <div id="input-container">
+            <input type="text" placeholder="Enter a new task">
+            <button onclick="addTodo()">➕ Add ToDo</button>
+        </div>
+
+        <!-- List Section -->
+        <div id="list-container">
+            <!-- Tasks will be added here -->
+        </div>
+    </div>
+
+    <script>
+        let parentElement = document.querySelector("#list-container");
+        let counter = 0;
+
+        function addTodo() {
+            let inputEle = document.querySelector("input"); 
+            let inputData = inputEle.value.trim(); 
+
+            if (inputData) {
+                // create div element to upend button and span inside it and then upend div inside the parent
+                let ele = document.createElement("div"); // created div ele
+                ele.id = "todo-" + (++counter); // assigned an id dynamically 
+
+
+                // create span and add data in it
+                let spanEl = document.createElement("span");
+                spanEl.innerHTML = inputData;
+
+                // create delete button 
+                let buttonEl = document.createElement("button");
+                buttonEl.innerHTML = "Delete";
+                buttonEl.setAttribute("onclick", `deleteTodo(${counter})`); 
+                ////////
+                ele.appendChild(spanEl);
+                ele.appendChild(buttonEl);
+                ////////
+                parentElement.appendChild(ele);
+                inputEle.value = "";
+            } else {
+                alert("Please enter a to-do task.");
+            }
+        }
+
+        function deleteTodo(id) {
+            let ele = document.getElementById("todo-" + id);
+            if (ele) ele.remove();
+        }
+    </script>
+
+</body>
+</html>
